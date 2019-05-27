@@ -26,8 +26,7 @@ CFLAGS      ?= -O3 -funroll-loops -g
 CFLAGS      += -Wall -D_FORTIFY_SOURCE=2 -g -Wno-pointer-sign 
 
 CXXFLAGS    ?= -O3 -funroll-loops -g
-CXXFLAGS    += -Wall -D_FORTIFY_SOURCE=2 -g -Wno-pointer-sign \
-               -Wno-variadic-macros
+CXXFLAGS    += -Wall -D_FORTIFY_SOURCE=2 -g -Wno-variadic-macros
 
 CLANG_CFL    = `$(LLVM_CONFIG) --cxxflags` -fno-rtti -fpic $(CXXFLAGS)
 CLANG_LFL    = `$(LLVM_CONFIG) --ldflags` $(LDFLAGS)
