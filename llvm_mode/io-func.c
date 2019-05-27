@@ -25,7 +25,7 @@
 static int granularity = 1; // byte level
 
 extern void __angora_track_fini_rs();
-__attribute__((destructor(0))) void __angora_track_fini(void) {
+__attribute__((destructor)) void __angora_track_fini(void) {
   __angora_track_fini_rs();
 }
 
