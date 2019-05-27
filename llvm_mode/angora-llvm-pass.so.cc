@@ -353,7 +353,7 @@ void AngoraLLVMPass::initVariables(Module &M) {
   if (output_cond_loc) {
     errs() << "Output cond log\n";
   }
-};
+}
 
 // Coverage statistics: AFL's Branch count
 // Angora enable function-call context.
@@ -417,7 +417,7 @@ void AngoraLLVMPass::countEdge(Module &M, BasicBlock &BB) {
 
   StoreInst *Store = IRB.CreateStore(NewPrevLoc, AngoraPrevLoc);
   setInsNonSan(Store);
-};
+}
 
 
 void AngoraLLVMPass::addFnWrap(Function &F) {
@@ -496,7 +496,7 @@ void AngoraLLVMPass::visitCallInst(Instruction *Inst) {
   }
 
   processCall(Inst);
-};
+}
 
 void AngoraLLVMPass::visitInvokeInst(Instruction *Inst) {
 
